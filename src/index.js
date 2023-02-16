@@ -1,11 +1,11 @@
 module.exports = function check(str, bracketsConfig) {
-	let openBracketsStack = [],
-	pairs = {};
-	
-	const debug = false;
+  const debug = false;
   if (debug) console.log(`\n\nstr = "${str}"`);
-  
-	pairs = convertToPairs(bracketsConfig);
+
+  let openBracketsStack = [],
+    pairs = {};
+
+  pairs = convertToPairs(bracketsConfig);
   if (debug) console.log("pairs =", pairs);
 
   for (let char of str) {
@@ -13,15 +13,15 @@ module.exports = function check(str, bracketsConfig) {
 
     if (canCloseBracket(char, openBracketsStack, pairs)) {
       if (debug) console.log("   this is closing bracket");
-      openBracketsStack.pop(); // use closing bracket
+      openBracketsStack.pop(); // for closing bracket remove opening bracket
       //
     } else {
       if (char in pairs) {
         if (debug) console.log(`   save opening bracket "${char}"`);
-        openBracketsStack.push(char); //save new open bracket
+        openBracketsStack.push(char); //save new opening bracket
       } else {
         if (debug) console.log(`   this is not open bracket "${char}"`);
-        return false; //this is not open bracket
+        return false; //this is not opening bracket
       }
     }
   }
