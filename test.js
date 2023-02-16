@@ -13,29 +13,29 @@ it('should check if brackets sequence is correct 1', () => {
   assert.equal(check('()', config1), true);
 });
 
-// it('should check if brackets sequence is correct 2', () => {
-//   assert.equal(check('((()))()', config1), true);
-// });
+it('should check if brackets sequence is correct 2', () => {
+  assert.equal(check('((()))()', config1), true);
+});
 
-// it('should check if brackets sequence is not correct 3', () => {
-//   assert.equal(check('())(', config1), false);
-// });
+it('should check if brackets sequence is not correct 3', () => {
+  assert.equal(check('())(', config1), false);
+});
 
-// it('should check if brackets sequence is correct 4', () => {
-//   assert.equal(check('([{}])', config3), true);
-// });
+it('should check if brackets sequence is correct 4', () => {
+  assert.equal(check('([{}])', config3), true);
+});
 
-// it('should check if brackets sequence is not correct 5', () => {
-//   assert.equal(check('[(])', config2), false);
-// });
+it('should check if brackets sequence is not correct 5', () => {
+  assert.equal(check('[(])', config2), false);
+});
 
-// it('should check if brackets sequence is correct 6', () => {
-//   assert.equal(check('[]()', config2), true);
-// });
+it('should check if brackets sequence is correct 6', () => {
+  assert.equal(check('[]()', config2), true);
+});
 
-// it('should check if brackets sequence is correct 7', () => {
-//   assert.equal(check('[]()(', config2), false);
-// });
+it('should check if brackets sequence is correct 7', () => {
+  assert.equal(check('[]()(', config2), false);
+});
 
 // it('should check if brackets sequence is correct 8', () => {
 //   assert.equal(check('||', config4), true);
